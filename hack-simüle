@@ -1,0 +1,96 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+# Giriş ekranı
+clear
+sleep 0.5
+figlet "GtxAnqel" | lolcat
+sleep 0.4
+echo -e "\e[1;32m╔═════════════════════════════════════╗"
+echo -e "║   WELCOME TO THE VOID INTERFACE    ║"
+echo -e "╚═════════════════════════════════════╝\e[0m"
+sleep 0.8
+
+# Sistem bilgisi simülasyonu
+echo -e "\e[1;30m[~] Initializing neural-link..."
+sleep 0.5
+echo -e "[~] Establishing phantom layer..."
+sleep 0.5
+echo -e "[~] Injecting custom protocol: GTX-A23"
+sleep 0.7
+echo -e "[✓] Environment secured.\e[0m"
+sleep 0.5
+echo ""
+
+# Menü fonksiyonu
+menu() {
+    echo -e "\e[1;36m╔═══════════════ MENU PANEL ═══════════════╗"
+    echo -e "║ 1) Ghost Network Scanner                 ║"
+    echo -e "║ 2) Backdoor Generator (BETA)            ║"
+    echo -e "║ 3) Terminal Theme Switcher              ║"
+    echo -e "║ 4) Secret Archive (🔒 locked)            ║"
+    echo -e "║ 5) Community Discord Launcher           ║"
+    echo -e "║ 0) Shutdown Interface                   ║"
+    echo -e "╚═════════════════════════════════════════╝\e[0m"
+    echo ""
+}
+
+while true; do
+    menu
+    read -p "▶ Seçim yap: " choice
+
+    case $choice in
+        1)
+            echo -e "\n[+] Ghost Network Scanner aktif ediliyor..."
+            sleep 1
+            echo "[✓] IP gölgeleri taranıyor..."
+            sleep 1.5
+            echo "[-] Bağlantı: 192.168.7.231 - Gölge bağlantı tespit edildi!"
+            sleep 2
+            ;;
+        2)
+            echo -e "\n[+] Backdoor generator başlatılıyor..."
+            sleep 1
+            echo "[!] Sürüm: BETA - Sorunlar olabilir!"
+            echo "[✓] Payload başarıyla oluşturuldu -> /sdcard/payload.apk"
+            sleep 2
+            ;;
+        3)
+            echo -e "\n[+] Tema değiştirici başlatılıyor..."
+            echo "Mevcut temalar:"
+            echo "1) NeonDark"
+            echo "2) Bloodline"
+            echo "3) Matrix Green"
+            read -p "Yeni tema seç (1-3): " theme
+            echo "[✓] Tema güncellendi!"
+            sleep 1.5
+            ;;
+        4)
+            echo -e "\n🔒 Bu arşiv erişime kapalı. Erişim anahtarı gerekli."
+            read -p "Erişim anahtarını gir: " key
+            if [[ "$key" == "gtxunlock" ]]; then
+                echo "[✓] Yetkilendirme başarılı. Arşiv açılıyor..."
+                sleep 1
+                echo "📁 İçerik: gizli-dosya1.txt, config.sys, dreams.log"
+            else
+                echo "[X] Hatalı anahtar. Sistem kilitlendi!"
+            fi
+            sleep 2
+            ;;
+        5)
+            echo "[+] Discord bağlantısı: https://discord.gg/gtxanqel"
+            sleep 2
+            ;;
+        0)
+            echo -e "\nInterface kapanıyor..."
+            sleep 1
+            echo "Görüşmek üzere, ajan. 👁️‍🗨️"
+            break
+            ;;
+        *)
+            echo -e "[X] Geçersiz giriş!"
+            sleep 1
+            ;;
+    esac
+    clear
+    figlet "GtxAnqel" | lolcat
+done
